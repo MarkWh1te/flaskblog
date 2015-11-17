@@ -1,0 +1,64 @@
+{% extends "blog/layout.html" %}
+{% block head %}
+	<title>KeepCoding</title>
+	<meta name="description" content="Keep Coding Everyday!Python,web,算法">
+	<meta name="author" content="MarkWhite">
+	<meta name="keywords" content="个人blog,,Python,web,算法">
+{% endblock %}
+
+
+
+{% block body %}
+
+{% for entry in entries %}
+<center>
+    <article>
+        <div class="heading"><h2 class="title" style="text-transform:none;" ><a href="{{ url_for('show_entry', entry_id=entry.id) }}">{{ entry.title |safe }}</a></h2></div>
+        <div class="content">
+                {{ (entry.fragment)|safe }}
+
+        </div>
+            <div class="row" style="padding-top: 20px">
+            <div class="container center-block">
+                
+                <div class="col-md-1"></div>
+                <div class="col-md-8 col-sm-12">
+                    <div class="span12 pagination-centered">
+                
+            </div>
+            
+
+            <div class="clear"></div>
+            </div>
+            </div>
+              </div>  
+        
+    </article>
+
+{% endfor %}
+<nav style="text-align:bottom">
+    <ul class="pagination">
+        {% if p.has_prev %}
+            <li><a href="{{ url_for('show_blog', page=p.prev_num) }}" aria-label="Previous"><span aria-hidden="true">上一页</span></a></li>
+        {% else %}
+            <li><a href="#">上一页</a></li>
+        {% endif %}
+
+        {% for i in pagination %}
+            {% if i == page %}
+                <li class="active"><a href="#">{{ i }}<span class="sr-only">(current)</span></a></li>
+            {% else %}
+                <li><a href="{{ url_for('show_blog', page=i) }}"> {{ i }}</a></li>
+            {% endif %}
+        {% endfor %}
+
+        {% if p.has_next %}
+            <li><a href="{{ url_for('show_blog', page=p.next_num) }}" aria-hidden="next"><span aria-hidden="true">下一页</span>
+        {% else %}
+            <li><a href="#">下一页</a></li>
+        {% endif %}
+       </a></li>
+    </ul>
+</nav>
+</center>
+{% endblock %}

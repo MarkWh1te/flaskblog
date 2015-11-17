@@ -1,0 +1,78 @@
+	<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="baidu-site-verification" content="iMjzOClF2L" />
+    <meta property="wb:webmaster" content="d07ab237c0e07028" />
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/font-awesome/3.0.0/css/font-awesome.min.css">
+    <link href="/static/css/home.css"  rel="stylesheet" type="text/css">
+	
+	
+
+
+    <link href='static/images/logo2.png' rel='icon' type='image/x-icon'/>
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?20621d5f9bc71d4cdbed22a2f3e8d91b";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+	</script>
+
+    <!--[if lt IE 8]>
+       <div style=' clear: both; text-align:center; position: relative;'>
+         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
+        </a>
+      </div>
+    <![endif]-->
+    <!--[if lt IE 9]>
+		<script src="/static/js/html5.js"></script>
+		<script src="/static/js/css3-mediaqueries.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<nav class="navbar navbar-default " style="opacity: .9" role="navigation">
+	<header>
+		<a class="navbar-brand" href="{{ url_for('show_blog') }}">KeepCoding</a>
+		
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="{{ url_for('show_blog') }}">Blog</a></li>
+                <li><a href="https://github.com/MarkWh1te">GitHub</a></li>
+			    <li><a href="{{ url_for('show_categories') }}">分类</a></li>
+                <li><a href="{{ url_for('show_comment') }}">留言</a></li>
+                <li><a href="{{ url_for('show_about') }}">关于</a></li>
+            </ul>
+        </div>
+		
+	</header>
+<!-- Content -->
+<div class="container center-block">
+	<div class="row" style="padding-top: 70px">
+		<div class="row block">
+			<div id="main-content" class="col-2-3">
+				<div class="row">
+					<div class="col-full">
+						<div class="wrap-col">
+                            {% block body %} {% endblock %}
+						</div>
+					</div>
+				</div>
+			</div> 
+     </div>
+</div>
+
+
+</div>
+<!--JavaScript-->
+<script src="http://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
