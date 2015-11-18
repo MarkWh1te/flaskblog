@@ -1,5 +1,5 @@
 
-##本blog系统后端使用python编写，
+本blog系统后端使用python编写，
 基于flask框架+mysql数据库，
 前端bootstrap+css。
 目前这个blog部署在SAE（新浪云）上面。
@@ -9,7 +9,7 @@
 支持后台管理与登录，管理文章，分类，标签，用户，文件，友链，评论等
 
 演示地址：
-markhouse.sinaapp.com
+[Keepcoding]markhouse.sinaapp.com
 
 使用SAE：
 ----------------
